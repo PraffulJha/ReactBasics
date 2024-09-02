@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Learn from './Learn'
 function App() {
   //let counter = 0
   //useState = responsible for changing of ui state 
