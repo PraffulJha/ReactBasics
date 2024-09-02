@@ -1,33 +1,23 @@
-import { useState } from 'react';
+// import { useState } from 'react'
+import './App.css'
+import Card from './components/Card'
 function App() {
-  //let counter = 0
-  //useState = responsible for changing of ui state 
-  let [counter,setCounter] = useState(0)
-  const addValue = () => {
-      //counter++;
-      setCounter(++counter)
-      console.log("Clicked",counter);
+  // const [count, setCount] = useState(0)
+  let myObj = {
+    username: "prafful",
+    age: 21
   }
-  const removeValue = () => {
-    //counter++;
-    if(counter > 0){
-      --counter;
-    }else {
-      counter = 0;
-    }
-    setCounter(counter)
-    console.log("Clicked",counter);
-}
+  let myObj2 = {
+    username: "Manish",
+    age: 22
+  }
+  let newArr = [1, 2, 3]
+
   return (
-   
     <>
-      <h1>
-       Welcome to future
-      </h1>
-      <h2>Count : {counter}</h2>
-      <button onClick={addValue} > Add button</button>
-      <button onClick={removeValue}> Remove value</button>
-      
+      <h1 className='bg-green-400 rounded p-4'>Tailwind test</h1>
+      <Card  someObj = "Work test" component ={myObj2} />
+      <Card  someObj = "TEst complete" component = {myObj}/>
     </>
   )
 }
